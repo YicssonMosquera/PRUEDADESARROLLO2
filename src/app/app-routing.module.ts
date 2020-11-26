@@ -4,6 +4,7 @@ import {PersonajesComponent} from '../app/components/personajes/personajes.compo
 import {CapitulosComponent} from '../app/components/capitulos/capitulos.component'
 
 const routes: Routes = [
+  {path: '',redirectTo:'/Personajes',pathMatch:'full'},
   {path: 'Personajes',component:PersonajesComponent },
   {path: 'Capitulos',component:CapitulosComponent }
 ];

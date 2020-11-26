@@ -13,4 +13,9 @@ export class PersonajesService {
   CargarPersonajes(){
     return this.http.get(`${this.API_URI}/character/`)
   }
+  CargarCapitulos(){
+    return this.http.get(`${this.API_URI}/episode/`)
+  }
+
+
 }

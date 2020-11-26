@@ -1,1 +1,22 @@
-<p>capitulos works!</p>
+<div class="row">
+    <div class="col-md-7">
+        <input type="text" id="buscar" placeholder="Dijite el dato por el cual desea buscar" class="form-control"
+            id="personajesfiltro">
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4 p-4" *ngFor="let capitulos of capitulos">
+        <div class="card card-photo">
+            <div class="card-header">
+                <strong>Nombre: </strong>{{capitulos.name}}
+            </div>
+            <div class="card-body">
+                <p><strong>Presentacion: </strong> {{capitulos.air_date}}</p>
+                <select class="form-control">
+                    <option value="">Personajes</option>
+                    <option value="">{{capitulos.characters}}</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
