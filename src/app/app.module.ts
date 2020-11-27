@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http'
 import { CommonModule } from "@angular/common";
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,19 +10,22 @@ import { PersonajesComponent } from './components/personajes/personajes.componen
 import { CapitulosComponent } from './components/capitulos/capitulos.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { PersonajesPipe } from './pipes/personajes/personajes.pipe';
+import { CapitulosPipe } from './pipes/capitulos/capitulos.pipe';
 @NgModule({
   declarations: [
     AppComponent,
     PersonajesComponent,
     CapitulosComponent,
     NavigationComponent,
-    PersonajesPipe
+    PersonajesPipe,
+    CapitulosPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,6 +9,7 @@ import {PersonajesService} from '../../services/personajes/personajes.service'
 export class CapitulosComponent implements OnInit {
 
   capitulos:any 
+  capitulosfiltro = ""
   constructor(private personajesservice:PersonajesService) { }
 
   ngOnInit(): void {
