@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {PersonajesService} from '../../services/personajes/personajes.service'
+import {Personajes} from '../../Models/personajes'
 @Component({
   selector: 'app-personajes',
   templateUrl: './personajes.component.html',
@@ -18,11 +19,10 @@ personajesfiltro = ""
   CargarPersonajes(){
   
     let array:any
-    let nuevo:any
     this.personajesservice.CargarPersonajes().subscribe(res=>{
     array = res
-      this.personajes = array.results
-      console.log(this.personajes)
+      let personajes2:Personajes[] = array.results
+      this.personajes = personajes2
     })
     
   }

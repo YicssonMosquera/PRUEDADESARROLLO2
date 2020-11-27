@@ -11,11 +11,13 @@
             </div>
             <div class="card-body">
                 <h5><strong>Presentacion: </strong> {{capitulos.air_date}}</h5>
-                <select class="form-control">
+                <select class="form-control " onchange="location = this.value;">
                     <option value="">Personajes</option>
-                    <option value="">{{capitulos.characters}}</option>
+                    <option   *ngFor="let capitulos of capitulos.characters" >{{capitulos}}</option>
                 </select>
             </div>
+           
         </div>
     </div>
+   
 </div>

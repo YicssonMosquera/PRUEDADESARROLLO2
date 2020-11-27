@@ -20,8 +20,8 @@
 
                         <select class="form-control " >
                             <option value="">Capitulos</option>
-                            <option>
-                                {{personajes.episode}}
+                            <option *ngFor="let personajes of personajes.episode">
+                                {{personajes}}
                             </option>
                             
                         </select>

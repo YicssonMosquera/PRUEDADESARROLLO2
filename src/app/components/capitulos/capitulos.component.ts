@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {PersonajesService} from '../../services/personajes/personajes.service'
-
+import {Capitulos} from '../../Models/capitulos'
 @Component({
   selector: 'app-capitulos',
   templateUrl: './capitulos.component.html',
@@ -8,7 +8,11 @@ import {PersonajesService} from '../../services/personajes/personajes.service'
 })
 export class CapitulosComponent implements OnInit {
 
-  capitulos:any 
+  
+
+  capitulos:any
+  array2=[]
+  //capitulos2=[]
   capitulosfiltro = ""
   constructor(private personajesservice:PersonajesService) { }
 
@@ -19,11 +23,11 @@ export class CapitulosComponent implements OnInit {
   Cargarcapitulos(){
   
     let array:any
-    let nuevo:any
     this.personajesservice.CargarCapitulos().subscribe(res=>{
     array = res
-      this.capitulos = array.results
+     let capitulos2: Capitulos[]  = array.results
+     this.capitulos = capitulos2
     })
-    
+   
   }
 }
